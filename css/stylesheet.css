@@ -4,8 +4,8 @@ BODY {
 	background-repeat: no-repeat;
 }
 
+
 #gameWrapper {
-  background-color: white;
   width: 368px;
   height: 368px;
   -ms-transform: rotate(7deg);
@@ -25,4 +25,53 @@ BODY {
 	float: left;
 	background-color: white;
 	outline-color: none;
+	font-size: 60px;
+	color: black;
+}
+
+#reset {
+	width: 100px;
+	height: 40px;
+	position: absolute;
+	-ms-transform: rotate(7deg);
+	-webkit-transform: rotate(7deg);
+	transform: rotate(6.deg);
+	top: 84%;
+	left: 66%;
+}
+
+#p1 {
+	position: absolute;
+	-ms-transform: rotate(7deg);
+	-webkit-transform: rotate(7deg);
+	transform: rotate(6.deg);
+	top: 82%;
+	left: 55%;
+}
+
+#p1score {
+	position: absolute;
+	-ms-transform: rotate(7deg);
+	-webkit-transform: rotate(7deg);
+	transform: rotate(6.deg);
+	top: 83%;
+	left: 63%;
+}
+
+#p2 {
+	position: absolute;
+	-ms-transform: rotate(7deg);
+	-webkit-transform: rotate(7deg);
+	transform: rotate(6.deg);
+	top: 87%;
+	left: 76%;
+}
+
+#p2score {
+	position: absolute;
+	-ms-transform: rotate(7deg);
+	-webkit-transform: rotate(7deg);
+	transform: rotate(6.deg);
+	top: 88%;
+	left: 84%;
 }

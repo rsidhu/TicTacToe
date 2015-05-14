@@ -2,19 +2,26 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/module.js"></script>
 	<title></title>
 </head>
 <body>
 <div id="gameWrapper">
-	<button id="box1" class="box"></button>
-	<button id="box2" class="box"></button>
-	<button id="box3" class="box"></button>
-	<button id="box4" class="box"></button>
-	<button id="box5" class="box"></button>
-	<button id="box6" class="box"></button>
-	<button id="box7" class="box"></button>
-	<button id="box8" class="box"></button>
-	<button id="box9" class="box"></button>
+	<button id="box1" class="box" onclick = "playerMove('box1')"></button>
+	<button id="box2" class="box" onclick = "playerMove('box2')"></button>
+	<button id="box3" class="box" onclick = "playerMove('box3')"></button>
+	<button id="box4" class="box" onclick = "playerMove('box4')"></button>
+	<button id="box5" class="box" onclick = "playerMove('box5')"></button>
+	<button id="box6" class="box" onclick = "playerMove('box6')"></button>
+	<button id="box7" class="box" onclick = "playerMove('box7')"></button>
+	<button id="box8" class="box" onclick = "playerMove('box8')"></button>
+	<button id="box9" class="box" onclick = "playerMove('box9')"></button>
 </div>
+<button id="reset" onclick = "resetGame()">RESET</button>
+<h2 id="p1">Player 1: </h2>
+<h2 id="p1score">0</h2>
+<h2 id="p2">Player 2:</h2>
+<h2 id="p2score">0</h2>
 </body>
 </html>
