@@ -1,0 +1,28 @@
+BODY {
+	background-image: url(../images/background.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#gameWrapper {
+  background-color: white;
+  width: 368px;
+  height: 368px;
+  -ms-transform: rotate(7deg);
+  -webkit-transform: rotate(7deg);
+  transform: rotate(6.deg);
+  position: absolute;
+  top: 199px;
+  left: 745px;
+}
+
+.box {
+	width: 120px;
+	height: 120px;
+	border-color: red;
+	border-style: solid;
+	border-width: 2px;
+	float: left;
+	background-color: white;
+	outline-color: none;
+}
