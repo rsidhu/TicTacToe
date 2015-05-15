@@ -1,77 +1,22 @@
-BODY {
-	background-image: url(../images/background.png);
-	background-size: 100%;
-	background-repeat: no-repeat;
-}
-
-
-#gameWrapper {
-  width: 368px;
-  height: 368px;
-  -ms-transform: rotate(7deg);
-  -webkit-transform: rotate(7deg);
-  transform: rotate(6.deg);
-  position: absolute;
-  top: 199px;
-  left: 745px;
+#wrapper {
+	height: 306px;
+	width: 306px;
+	background-color: red;
+	margin: 100px auto;
 }
 
 .box {
-	width: 120px;
-	height: 120px;
-	border-color: red;
-	border-style: solid;
-	border-width: 2px;
+	display: inline-block;
 	float: left;
-	background-color: white;
-	outline-color: none;
-	font-size: 60px;
-	color: black;
-}
-
-#reset {
+	height: 100px;
 	width: 100px;
-	height: 40px;
-	position: absolute;
-	-ms-transform: rotate(7deg);
-	-webkit-transform: rotate(7deg);
-	transform: rotate(6.deg);
-	top: 84%;
-	left: 66%;
+	border: 1px solid black;
 }
 
-#p1 {
-	position: absolute;
-	-ms-transform: rotate(7deg);
-	-webkit-transform: rotate(7deg);
-	transform: rotate(6.deg);
-	top: 82%;
-	left: 55%;
+.moveX {
+	background-color: green;
 }
 
-#p1score {
-	position: absolute;
-	-ms-transform: rotate(7deg);
-	-webkit-transform: rotate(7deg);
-	transform: rotate(6.deg);
-	top: 83%;
-	left: 63%;
-}
-
-#p2 {
-	position: absolute;
-	-ms-transform: rotate(7deg);
-	-webkit-transform: rotate(7deg);
-	transform: rotate(6.deg);
-	top: 87%;
-	left: 76%;
-}
-
-#p2score {
-	position: absolute;
-	-ms-transform: rotate(7deg);
-	-webkit-transform: rotate(7deg);
-	transform: rotate(6.deg);
-	top: 88%;
-	left: 84%;
+.moveY {
+	background-color: blue;
 }
