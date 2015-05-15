@@ -1,2 +1,2 @@
 angular
-    .module('tttgApp', []);
+    .module('tttgApp', ['firebase']);
