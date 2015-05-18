@@ -2,6 +2,7 @@
 <html ng-app="tttgApp">
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.css">
 		<script type="text/javascript" src="js/angular.js"></script>
 		<script type="text/javascript" src="js/firebase.js"></script>
 		<script type="text/javascript" src="js/angularfire.js"></script>
@@ -10,13 +11,13 @@
 			<title>Tic Tac Top Gun</title>
 	</head>
 	<body ng-controller = "TTTController as TTTCtrl">
+		<img id="logo" src ="images/topgun.png"/>
 		<div id = "wrapper">
 			<div class="box" ng-repeat="box in TTTCtrl.boxes" ng-class="{'moveX': box.moveX, 'moveY': box.moveY}" id="{{box.name}}" ng-click="TTTCtrl.playerMove($index)"></div>
 		</div>
 		<div id="scores">
-			<h2 id="p1score">Player 1 Score: {{TTTCtrl.counters[0].$value}}</h2>
-			<h2 id="p2score">Player 2 Score: {{TTTCtrl.counters[1].$value}}</h2>
-			<h2 id="playerNumber">{{TTTCtrl.counters[2].$value}}</h2>
+			<h2 id="p1score"><img src = "images/goose.png"/>Player 1 Score: {{TTTCtrl.counters[0].$value}}</h2>
+			<h2 id="p2score"><img src = "images/maverick.png"/>Player 2 Score: {{TTTCtrl.counters[1].$value}}</h2>
 			<button ng-click="TTTCtrl.reset()">Reset</button>
 		</div>
 		<!-- <div id="p1name">
@@ -31,16 +32,47 @@
 		 	<input class="text-box2" placeholder="Player 2 Name" ng-model="TTTCtrl.p2namer" type="text" >
 			<input type="submit" class="btn btn-add2" value = "send">
 		</div> -->
-		<!-- <div id="chat">
+		<div id="chatroom">
+<section class="module">
+  
+  <header class="top-bar">
+    
+    <div class="left">
+      <span class="icon typicons-message"></span>
+      <h1>Air Traffic Control</h1>
+    </div>
+    
+    <div class="right">
+      <span class="icon typicons-minus"></span>
+      <span class="icon typicons-times"></span>
+    </div>
+    
+  </header>
+  
+  <ul class="discussion">
+    <li class="other">
+      <div class="avatar">
+      </div>
+      <div class="messages">
+        	<div id="chat">
 			<ul>
 				<li ng-repeat="chat in TTTCtrl.chats">
 					<span>{{chat.message}}</span>
 				</li>
 			</ul>
 			<form class="add-chat" ng-submit="TTTCtrl.addChat()">
-					<input class="textbox" type="text" placeholder="Add Message" ng-model="TTTCtrl.messager" >
+					<input class="textbox" type="text" placeholder="Add Message" ng-model="TTTCtrl.text" >
 					<input type="submit" class="btn btn-add" value="send">
 			</form>
-		</div> -->
+		</div>
+      </div>
+  </ul>
+  </div>
+  
+</section>
+		<div id="cloud"></div>
+		<audio autoplay>
+  			<source src="audio/dangerzone.mp3" type="audio/mp3">
+		</audio>
 	</body>
 </html>

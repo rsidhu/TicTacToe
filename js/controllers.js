@@ -22,6 +22,18 @@ angular
         	return counter;
         })();
 
+        self.chats = (function(){
+            var ref = new Firebase("https://tictactopgun.firebaseio.com/chats");
+            var chats = $firebaseArray(ref);
+            return chats;
+        })();
+
+        self.addChat = function(){
+            console.log("adding chat");
+            self.chats.$add({message: self.text});
+            self.text = null;
+        }
+
         // self.players = (function(){
        	// 	var ref = new Firebase("https://tictactopgun.firebaseio.com/players")
        	// 	var players = $firebaseArray(ref);
@@ -98,6 +110,9 @@ angular
 		        ){
 	        		self.counters[1].$value++;
 	        		self.reset();
+        		} else if (self.counters[3].$value >= 9){
+        			alert("It's a tie douchebag!");
+        			self.reset();
         		}
         }
 
