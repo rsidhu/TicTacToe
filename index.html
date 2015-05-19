@@ -18,58 +18,41 @@
 		<div id="scores">
 			<h2 id="p1score"><img src = "images/goose.png"/>Player 1 Score: {{TTTCtrl.counters[0].$value}}</h2>
 			<h2 id="p2score"><img src = "images/maverick.png"/>Player 2 Score: {{TTTCtrl.counters[1].$value}}</h2>
-			<button ng-click="TTTCtrl.reset()">Reset</button>
+			<button ng-click="TTTCtrl.reset()">Reset All</button>
+			<button id ="resetB" ng-click="TTTCtrl.resetBoard()">Reset Board</button>
 		</div>
-		<!-- <div id="p1name">
-			{{TTTCtrl.players[0].$value}}
-			<form class="p1-name" ng-submit="TTTCtrl.p1Logger()">
-			<input class="text-box" placeholder="Player 1 Name" ng-model="TTTCtrl.p1namer"type="text" >
-			<input type="submit" class="btn btn-add" value = "send">
-		</div>
-		<div id="p2name">
-			{{TTTCtrl.players[1].$value}}
-			<form class="p2-name" ng-submit="TTTCtrl.p2Logger()">
-		 	<input class="text-box2" placeholder="Player 2 Name" ng-model="TTTCtrl.p2namer" type="text" >
-			<input type="submit" class="btn btn-add2" value = "send">
-		</div> -->
 		<div id="chatroom">
-<section class="module">
-  
-  <header class="top-bar">
-    
-    <div class="left">
-      <span class="icon typicons-message"></span>
-      <h1>Air Traffic Control</h1>
-    </div>
-    
-    <div class="right">
-      <span class="icon typicons-minus"></span>
-      <span class="icon typicons-times"></span>
-    </div>
-    
-  </header>
-  
-  <ul class="discussion">
-    <li class="other">
-      <div class="avatar">
-      </div>
-      <div class="messages">
-        	<div id="chat">
-			<ul>
-				<li ng-repeat="chat in TTTCtrl.chats">
-					<span>{{chat.message}}</span>
-				</li>
-			</ul>
-			<form class="add-chat" ng-submit="TTTCtrl.addChat()">
-					<input class="textbox" type="text" placeholder="Add Message" ng-model="TTTCtrl.text" >
-					<input type="submit" class="btn btn-add" value="send">
-			</form>
-		</div>
-      </div>
-  </ul>
-  </div>
-  
-</section>
+			<section class="module">
+			  <header class="top-bar">
+			    <div class="left">
+			      <span class="icon typicons-message"></span>
+			      <h1>Air Traffic Control</h1>
+			    </div>
+			    <div class="right">
+			      <span class="icon typicons-minus"></span>
+			      <span class="icon typicons-times"></span>
+			    </div>
+			  </header>
+			  <ul class="discussion">
+			    <li class="other">
+			      <div class="avatar">
+			      </div>
+			      <div class="messages">
+			        	<div id="chat">
+						<ul>
+							<li ng-repeat="chat in TTTCtrl.chats">
+								<span>{{chat.message}}</span>
+							</li>
+						</ul>
+						<form class="add-chat" ng-submit="TTTCtrl.addChat()">
+								<input class="textbox" type="text" placeholder="Add Message" ng-model="TTTCtrl.text" >
+								<input type="submit" class="btn btn-add" value="send">
+						</form>
+					</div>
+			      </div>
+			  </ul>
+			</section>
+		</div>  
 		<div id="cloud"></div>
 		<audio autoplay>
   			<source src="audio/dangerzone.mp3" type="audio/mp3">

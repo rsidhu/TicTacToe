@@ -54,12 +54,34 @@ BUTTON:active {
 	top:1px;
 }
 
+#resetB {
+	position: relative;
+	top: 30px;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
 
 #logo {
 	height: 50%;
 	width: 50%;
 	display: block;
 	margin: 0 auto;
+	-webkit-animation-name: fadeInDown;
+  	animation-name: fadeInDown;
+  	animation-duration: 4s;
 }
 
 #wrapper {
@@ -134,14 +156,12 @@ div#cloud {
 }
 
 @keyframes example {
-    0%   {left:0px; top:0px;}
-    25%  {left:200px; top:0px;}
-    50%  {left:200px; top:200px;}
-    75%  {left:0px; top:200px;}
-    100% {left:0px; top:0px;}
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;}
+  50%  {left:200px; top:200px;}
+  75%  {left:0px; top:200px;}
+  100% {left:0px; top:0px;}
 }
-
-/* The element to apply the animation to */
 
 
 div#cloud:after, div#cloud:before {
